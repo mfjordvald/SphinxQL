@@ -19,5 +19,15 @@
             "mnshankar\\Sphinxql": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mnshankar\\Sphinxql\\SphinxqlServiceProvider"
+            ],
+            "aliases": {
+                "SphinxQL": "mnshankar\\Sphinxql\\Facades\\SphinxqlFacade"
+            }
+        }
+    },
 }
