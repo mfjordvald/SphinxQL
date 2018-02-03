@@ -29,5 +29,5 @@
                 "SphinxQL": "mnshankar\\Sphinxql\\Facades\\SphinxqlFacade"
             }
         }
-    },
+    }
 }
