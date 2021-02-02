@@ -9,10 +9,14 @@
             "email": "mnshankar@yahoo.com"
         }
     ],
+	"repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/ben221199/SphinxQL-Query-Builder"
+    }],
     "require": {
         "php": "^7.2|^8.0",
         "illuminate/support": "8.*",
-        "foolz/sphinxql-query-builder": "^2.1.0"
+        "foolz/sphinxql-query-builder": "dev-master"
     },
     "autoload": {
         "psr-0": {
