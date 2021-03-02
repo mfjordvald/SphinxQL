@@ -1,4 +1,4 @@
-<?php namespace mnshankar\Sphinxql;
+<?php namespace mfjordvald\Sphinxql;
 
 use Illuminate\Support\ServiceProvider;
 

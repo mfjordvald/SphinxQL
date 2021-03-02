@@ -1,8 +1,8 @@
 {
     "name": "mnshankar/sphinxql",
-    "description": "Integrate SphinxQL with Laravel 6. Simplifies Laravel-Sphinx(RT) search",
+    "description": "Integrate SphinxQL with Laravel 8. Simplifies Laravel-Sphinx(RT) search",
     "license":"MIT",
-    "keywords": ["Laravel","Laravel6","SphinxQL", "Sphinx RT", "Search"],
+    "keywords": ["Laravel","Laravel8","SphinxQL", "Sphinx RT", "Search"],
     "authors": [
         {
             "name": "Shankar Manamalkav",
@@ -10,23 +10,23 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
+        "php": "^7.4|^8.0",
         "illuminate/support": "8.*",
         "foolz/sphinxql-query-builder": "dev-php8"
     },
     "autoload": {
         "psr-0": {
-            "mnshankar\\Sphinxql": "src/"
+            "mfjordvald\\Sphinxql": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "mnshankar\\Sphinxql\\SphinxqlServiceProvider"
+                "mfjordvald\\Sphinxql\\SphinxqlServiceProvider"
             ],
             "aliases": {
-                "SphinxQL": "mnshankar\\Sphinxql\\Facades\\SphinxqlFacade"
+                "SphinxQL": "mfjordvald\\Sphinxql\\Facades\\SphinxqlFacade"
             }
         }
     }

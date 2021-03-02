@@ -1,39 +1,41 @@
-## SphinxQL library for Laravel 6
+## SphinxQL library for Laravel 8
 
 This is a simple library that will help you to query a sphinx search server using SphinxQL.
 My main motivation for putting together this package was to interface easily
-with Sphinx Real-time indexes on Laravel 6 (Updating rt indexes is ONLY possible using SphinxQL)
+with Sphinx Real-time indexes on Laravel 8 (Updating rt indexes is ONLY possible using SphinxQL)
 
 As an added bonus, SphinxQL is much more performant than SphinxAPI:
 http://sphinxsearch.com/blog/2010/04/25/sphinxapi-vs-sphinxql-benchmark/
 
+This package should be compatible with Manticore Search through the foolz/sphinxql-query-builder library.
+
 ## Installation
 
-Add `mnshankar/sphinxql` to `composer.json`.
+Add `mfjordvald/sphinxql` to `composer.json`.
 ```json
-    "mnshankar/sphinxql": "1.0"
+    "mfjordvald/sphinxql": "2.0"
 ```
 Run `composer update` to pull down Sphinxql. Note that Sphinxql has a
-dependency on 'FoolCode/SphinxQL-Query-Builder', which does much of the weight lifting
+dependency on 'FoolCode/SphinxQL-Query-Builder', which does much of the heavy lifting
 (http://foolcode.github.io/SphinxQL-Query-Builder/)
 
 Now open up `app/config/app.php` and add the service provider to your `providers` array.
 ```php
     'providers' => array(
-        'mnshankar\Sphinxql\SphinxqlServiceProvider',
+        'mfjordvald\Sphinxql\SphinxqlServiceProvider',
     )
 ```
 and the alias:
 ```php
     'aliases' => array(
-        'SphinxQL'         => 'mnshankar\Sphinxql\Facades\SphinxqlFacade',
+        'SphinxQL'         => 'mfjordvald\Sphinxql\Facades\SphinxqlFacade',
     )
 ```
 
 If you need to override the default configuration options (server/port), please use the config publish command
 
 ```php
-php artisan config:publish mnshankar/sphinxql
+php artisan config:publish mfjordvald/sphinxql
 ```
 
 ## RT (Real-Time) Indexes in Sphinx
@@ -181,3 +183,7 @@ The $key parameter can be used to change the primary key column name (defaults t
 ### License
 
 This software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+### Credit
+
+This is a fork of https://github.com/mnshankar/SphinxQL who did the initial work but seems to have moved on to other projects nowadays.
