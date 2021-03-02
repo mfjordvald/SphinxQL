@@ -19,7 +19,7 @@ class Sphinxql
      */
     public function query()
     {
-        return $this->library->create($this->library->getConnection());
+        return $this->library;
     }
 
     /**
@@ -93,7 +93,7 @@ class Sphinxql
      */
     public function helper()
     {
-        return Helper::create($this->library->getConnection());
+        return new Helper($this->library->getConnection());
     }
 
     /**
@@ -102,7 +102,7 @@ class Sphinxql
      */
     public function count()
     {
-        $meta = Helper::create($this->library->getConnection())->showMeta()->execute();
+        $meta = (new Helper($this->library->getConnection()))->showMeta()->execute();
 
         foreach ($meta as $entry)
         {
