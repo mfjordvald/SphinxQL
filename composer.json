@@ -1,9 +1,13 @@
 {
-    "name": "mnshankar/sphinxql",
+    "name": "mfjordvald/sphinxql",
     "description": "Integrate SphinxQL with Laravel 8. Simplifies Laravel-Sphinx(RT) search",
     "license":"MIT",
     "keywords": ["Laravel","Laravel8","SphinxQL", "Sphinx RT", "Search"],
     "authors": [
+        {
+            "name": "Martin Fjordvald",
+            "email": "martin@evilgeniusmedia.org"
+        },
         {
             "name": "Shankar Manamalkav",
             "email": "mnshankar@yahoo.com"
