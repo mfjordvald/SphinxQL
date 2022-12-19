@@ -11,9 +11,9 @@ This package should be compatible with Manticore Search through the foolz/sphinx
 
 ## Installation
 
-Add `mfjordvald/sphinxql` to `composer.json`.
-```json
-    "mfjordvald/sphinxql": "2.0"
+Require this package using composer.
+```bash
+    $ composer require mfjordvald/sphinxql
 ```
 Run `composer update` to pull down Sphinxql. Note that Sphinxql has a
 dependency on 'FoolCode/SphinxQL-Query-Builder', which does much of the heavy lifting
@@ -28,14 +28,14 @@ Now open up `app/config/app.php` and add the service provider to your `providers
 and the alias:
 ```php
     'aliases' => array(
-        'SphinxQL'         => 'mfjordvald\Sphinxql\Facades\SphinxqlFacade',
+        'SphinxQL' => 'mfjordvald\Sphinxql\Facades\SphinxqlFacade',
     )
 ```
 
 If you need to override the default configuration options (server/port), please use the config publish command
 
 ```php
-php artisan config:publish mfjordvald/sphinxql
+    php artisan config:publish mfjordvald/sphinxql
 ```
 
 ## RT (Real-Time) Indexes in Sphinx
