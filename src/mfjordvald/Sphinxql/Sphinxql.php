@@ -59,7 +59,10 @@ class Sphinxql
             }
             else
             {
-                $result = call_user_func_array($name . "::whereIn", array($key, $matchids))->orderByRaw(\DB::raw('FIELD(`' . $key . '`, ' . implode(',', $matchids) . ')'))->get();
+                $result = call_user_func_array(
+                    $name . "::whereIn", array($key, $matchids))->orderByRaw(
+                        \DB::raw('FIELD(`' . $key . '`, ' . implode(',', $matchids) . ')')->getValue(\DB::connection()->getQueryGrammar())
+                    )->get();
             }
         }
         else
@@ -71,7 +74,9 @@ class Sphinxql
             }
             else
             {
-                $result = \DB::table($name)->whereIn($key, $matchids)->orderByRaw(\DB::raw('FIELD(`' . $key . '`, ' . implode(',', $matchids) . ')'))->get();
+                $result = \DB::table($name)->whereIn($key, $matchids)->orderByRaw(
+                    \DB::raw('FIELD(`' . $key . '`, ' . implode(',', $matchids) . ')')->getValue(\DB::connection()->getQueryGrammar())
+                )->get();
             }
         }
 
